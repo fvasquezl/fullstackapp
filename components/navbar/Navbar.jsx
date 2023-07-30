@@ -19,7 +19,9 @@ const Navbar = () => {
             <div className={styles.links}>
                 <DarkModeToggle />
                 {links.map(link => (
-                    <Link href={link.url} key={link.id} className={styles.link}>{link.title}</Link>
+                    <Link key={link.id} href={link.url} className={styles.link}>
+                        {link.title}
+                    </Link>
                 ))}
                 <button className={styles.logout} onClick={() => { console.log("logged out") }}>Logout</button>
             </div>
